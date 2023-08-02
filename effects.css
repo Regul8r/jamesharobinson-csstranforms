@@ -1,0 +1,99 @@
+
+
+  
+  
+
+body {
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+    margin: 6em 6em;
+    font-weight: bold;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+
+ 
+  .sneakers {
+    position: relative;
+    animation-name: moveSneakers;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  .sneakers span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    float: left;
+    margin-right: 10px;
+  }
+  li:last-of-type {
+    margin-right: 0;
+  }
+  
+  a {
+    display: block;
+  }
+  
+  img {
+    width: 200px;
+    height: 150px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s linear;
+  }
+  a:hover #img1, a:focus #img1 {
+    transform: rotate(-3deg) scale(1.5);
+  } 
+  a:hover #img2, a:focus #img2 {
+    transform: rotate(5deg) scale(1.5); 
+  } 
+  a:hover #img3, a:focus #img3 { 	
+    transform: rotate(-7deg) scale(1.5); 
+  } 
+  a:hover #img4, a:focus #img4 { 	
+    transform: rotate(2deg) scale(1.5); 
+  }  
+  a:hover img { 	
+    box-shadow: 6px 6px 6px rgba(2, 247, 206, 0.3); 
+  } 
+
+  #sneakers {
+    width: 200px;   
+    height: 50px;
+    position: absolute; 
+    top: 10px;
+    left: 30px;
+    
+
+    
+
+}
+@keyframes moveSneakers {
+    from {
+        left: 100px;
+    }
+    to {
+        left: 500px;
+    }
+
+}
